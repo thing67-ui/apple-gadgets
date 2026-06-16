@@ -157,7 +157,7 @@ function renderCategories() {
   grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 }
 
-/* ---------- RENDER PRODUCTS (FLOATING PANELS) ---------- */
+/* ---------- RENDER PRODUCTS ---------- */
 function renderProducts() {
   const grid = document.getElementById('productsGrid');
   if (!grid) return;
@@ -200,14 +200,16 @@ function renderProducts() {
       <div class="panel-corner br"></div>
     `;
 
-    panel.querySelector('.panel-btn').addEventListener('click', () => openModal(i));
+    panel.querySelector('.panel-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      openModal(i);
+    });
     panel.addEventListener('click', () => openModal(i));
-
     grid.appendChild(panel);
   });
 }
 
-/* ---------- PRODUCT MODAL ---------- */
+/* ---------- MODAL ---------- */
 function createModal() {
   const modal = document.createElement('div');
   modal.id = 'productModal';
@@ -230,7 +232,7 @@ function createModal() {
         <h2 class="modal-title" id="modalName"></h2>
         <div class="modal-price-row">
           <span class="modal-price" id="modalPrice"></span>
-          <span class="modal-old" id="modalOld"></span>
+          <span class="modal-old"  id="modalOld"></span>
           <span class="modal-disc" id="modalDiscount"></span>
         </div>
         <p class="modal-desc" id="modalDesc"></p>
@@ -243,7 +245,6 @@ function createModal() {
     </div>
   `;
   document.body.appendChild(modal);
-
   modal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
   modal.querySelector('.modal-close').addEventListener('click', closeModal);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
@@ -252,7 +253,6 @@ function createModal() {
 function openModal(index) {
   const p     = products[index];
   const modal = document.getElementById('productModal');
-
   document.getElementById('modalIcon').textContent     = p.placeholder;
   document.getElementById('modalTag').textContent      = p.tag + ' // ' + p.category;
   document.getElementById('modalCategory').textContent = p.category;
@@ -261,19 +261,15 @@ function openModal(index) {
   document.getElementById('modalOld').textContent      = p.oldPrice || '';
   document.getElementById('modalDiscount').textContent = p.discount || '';
   document.getElementById('modalDesc').textContent     = p.desc;
-
-  const specsEl = document.getElementById('modalSpecs');
-  specsEl.innerHTML = p.specs.map(s =>
+  document.getElementById('modalSpecs').innerHTML      = p.specs.map(s =>
     `<div class="modal-spec-item"><span class="spec-dot">◆</span>${s}</div>`
   ).join('');
-
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
-  const modal = document.getElementById('productModal');
-  modal.classList.remove('open');
+  document.getElementById('productModal').classList.remove('open');
   document.body.style.overflow = '';
 }
 
@@ -295,7 +291,7 @@ function renderOffers() {
   grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 }
 
-/* ---------- ADD REVEAL CLASSES ---------- */
+/* ---------- REVEAL CLASSES ---------- */
 function addRevealClasses() {
   document.querySelectorAll('.section-header').forEach(el => el.classList.add('reveal'));
   const aboutContent = document.querySelector('.about-content');
