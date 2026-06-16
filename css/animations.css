@@ -1,0 +1,247 @@
+/* ============================================
+   APPLE GADGETS — animations.css
+   All motion, transitions, scroll reveals
+   ============================================ */
+
+/* ---------- SCROLL REVEAL BASE ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- STAGGER DELAYS ---------- */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+/* ---------- HERO ENTRANCE ---------- */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroGlowPulse {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  50%       { opacity: 0.9; transform: translateX(-50%) scale(1.08); }
+}
+
+.hero-eyebrow  { animation: heroFadeUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.2s both; }
+.hero-title    { animation: heroFadeUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.4s both; }
+.hero-subtitle { animation: heroFadeUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.6s both; }
+.hero-cta-group{ animation: heroFadeUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.8s both; }
+.hero-stats    { animation: heroFadeUp 0.7s cubic-bezier(0.4,0,0.2,1) 1.0s both; }
+
+.hero-hud-tl   { animation: heroFadeUp 1s ease 1.2s both; }
+.hero-hud-tr   { animation: heroFadeUp 1s ease 1.3s both; }
+.hero-hud-bl   { animation: heroFadeUp 1s ease 1.4s both; }
+
+.hero-glow {
+  animation: heroGlowPulse 6s ease-in-out infinite;
+}
+
+/* ---------- HUD CORNER FLICKER ---------- */
+@keyframes hudFlicker {
+  0%, 100% { opacity: 0.6; }
+  45%       { opacity: 0.6; }
+  50%       { opacity: 0.2; }
+  55%       { opacity: 0.6; }
+}
+
+.contact-card:hover .hud-corner,
+.product-card:hover .hud-corner {
+  animation: hudFlicker 2.5s ease-in-out infinite;
+}
+
+/* ---------- CYAN GLOW PULSE (accent elements) ---------- */
+@keyframes cyanPulse {
+  0%, 100% { box-shadow: 0 0 0px rgba(0, 212, 255, 0); }
+  50%       { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+}
+
+.btn-primary {
+  animation: cyanPulse 3s ease-in-out infinite;
+}
+
+.btn-primary:hover {
+  animation: none;
+}
+
+/* ---------- FLOATING ANIMATION ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.about-hud-box {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ---------- SCAN LINE (HUD boxes) ---------- */
+@keyframes scanLine {
+  0%   { top: 0%; opacity: 0.6; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.about-hud-box::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  animation: scanLine 3.5s linear infinite;
+  pointer-events: none;
+}
+
+/* ---------- GRID LINES DRIFT ---------- */
+@keyframes gridDrift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+.hero-bg-grid {
+  animation: gridDrift 20s linear infinite;
+}
+
+/* ---------- NAVBAR SCROLL INDICATOR ---------- */
+@keyframes navbarSlideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+.navbar {
+  animation: navbarSlideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+/* ---------- PRODUCT CARD SHIMMER ---------- */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 212, 255, 0.04) 50%,
+    transparent 100%
+  );
+  background-size: 400px 100%;
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: shimmer 2s linear infinite;
+  pointer-events: none;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- OFFER CARD GLOW PULSE ---------- */
+@keyframes violetPulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
+.offer-glow {
+  animation: violetPulse 3s ease-in-out infinite;
+}
+
+/* ---------- STAT NUMBER COUNT FLASH ---------- */
+@keyframes countFlash {
+  0%   { color: var(--accent-cyan); }
+  50%  { color: white; }
+  100% { color: var(--accent-cyan); }
+}
+
+.stat-number {
+  animation: countFlash 4s ease-in-out infinite;
+}
+
+/* ---------- CATEGORY CARD ICON BOUNCE ---------- */
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.category-card:hover .category-icon {
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+/* ---------- FOOTER HUD BLINK ---------- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.footer-hud {
+  animation: blink 2.5s ease-in-out infinite;
+}
+
+/* ---------- REDUCED MOTION (accessibility) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

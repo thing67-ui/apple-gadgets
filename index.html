@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Apple Gadgets — Bangladesh's premium tech store. Shop the latest smartphones, laptops, accessories and more at Bashundhara City & Jamuna Future Park." />
+  <meta name="keywords" content="Apple Gadgets, tech store Bangladesh, iPhone Bangladesh, MacBook Bangladesh, gadgets Dhaka" />
+  <meta name="author" content="Apple Gadgets" />
+
+  <!-- Open Graph (for social sharing) -->
+  <meta property="og:title" content="Apple Gadgets — Premium Tech Store Bangladesh" />
+  <meta property="og:description" content="Shop the latest smartphones, laptops, tablets and accessories in Dhaka." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.applegadgetsbd.com/" />
+
+  <title>Apple Gadgets | Premium Tech Store Bangladesh</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- GSAP Animation Library (free CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Our CSS files -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">Apple <span class="accent">Gadgets</span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="tel:09678148148" class="nav-phone">📞 09678148148</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-container">
+      <div class="hero-hud-tl">AG_SYS // ONLINE</div>
+      <div class="hero-hud-tr">DHK // BD // 2026</div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">বাংলাদেশের প্রিমিয়াম টেক স্টোর</p>
+        <h1 class="hero-title">
+          Next-Level<br />
+          <span class="hero-title-accent">Tech.</span><br />
+          Delivered.
+        </h1>
+        <p class="hero-subtitle">
+          Shop the latest smartphones, laptops, tablets & accessories.<br />
+          Two outlets in Dhaka — Bashundhara City & Jamuna Future Park.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#products" class="btn-primary">Explore Products</a>
+          <a href="#contact" class="btn-secondary">Find a Store</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Outlets</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">36mo</span>
+          <span class="stat-label">EMI Available</span>
+        </div>
+      </div>
+      <div class="hero-hud-bl">// BASHUNDHARA CITY — JAMUNA FUTURE PARK</div>
+    </div>
+  </section>
+
+  <!-- ========== CATEGORIES SECTION ========== -->
+  <section class="categories" id="categories">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">BROWSE BY TYPE</p>
+        <h2 class="section-title">Featured <span class="accent">Categories</span></h2>
+      </div>
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- Categories will be added in next step -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS SECTION ========== -->
+  <section class="products" id="products">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">LATEST ARRIVALS</p>
+        <h2 class="section-title">New <span class="accent">Trends</span></h2>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be added in next step -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OFFERS SECTION ========== -->
+  <section class="offers" id="offers">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">LIMITED TIME</p>
+        <h2 class="section-title">Hot <span class="accent">Deals</span></h2>
+      </div>
+      <div class="offers-grid" id="offersGrid">
+        <!-- Offers will be added in next step -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-content">
+          <p class="section-eyebrow">WHO WE ARE</p>
+          <h2 class="section-title">Bangladesh's <span class="accent">Trusted</span> Tech Partner</h2>
+          <p class="about-text">Apple Gadgets is one of Bangladesh's biggest tech retail chains. We bring you the latest devices, genuine products, and unbeatable after-sales service — all under one roof.</p>
+          <ul class="about-features">
+            <li><span class="feature-icon">✦</span> 36 Months EMI Facility</li>
+            <li><span class="feature-icon">✦</span> Fastest Home Delivery</li>
+            <li><span class="feature-icon">✦</span> Exchange Facility</li>
+            <li><span class="feature-icon">✦</span> Genuine Products Only</li>
+            <li><span class="feature-icon">✦</span> After-Sales Service</li>
+          </ul>
+        </div>
+        <div class="about-visual">
+          <div class="about-hud-box">
+            <div class="hud-corner tl"></div>
+            <div class="hud-corner tr"></div>
+            <div class="hud-corner bl"></div>
+            <div class="hud-corner br"></div>
+            <p class="hud-label">SYSTEM STATUS</p>
+            <div class="hud-stats">
+              <div class="hud-stat"><span>OUTLETS</span><span class="hud-val">02</span></div>
+              <div class="hud-stat"><span>BRANDS</span><span class="hud-val">50+</span></div>
+              <div class="hud-stat"><span>PRODUCTS</span><span class="hud-val">500+</span></div>
+              <div class="hud-stat"><span>EMI</span><span class="hud-val">36MO</span></div>
+              <div class="hud-stat"><span>DELIVERY</span><span class="hud-val">FAST</span></div>
+              <div class="hud-stat"><span>STATUS</span><span class="hud-val accent">ONLINE</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">FIND US</p>
+        <h2 class="section-title">Our <span class="accent">Locations</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="hud-corner tl"></div>
+          <div class="hud-corner tr"></div>
+          <div class="hud-corner bl"></div>
+          <div class="hud-corner br"></div>
+          <p class="contact-card-tag">OUTLET // 01</p>
+          <h3>Bashundhara City</h3>
+          <p class="contact-bangla">বসুন্ধরা সিটি আউটলেট</p>
+          <p class="contact-address">Basement-2, Shop-26, Bashundhara City Shopping Complex, Panthapath, Dhaka 1205</p>
+          <a href="https://maps.google.com/?q=23.7512555,90.3911501" target="_blank" class="btn-outline">View on Map →</a>
+        </div>
+        <div class="contact-card">
+          <div class="hud-corner tl"></div>
+          <div class="hud-corner tr"></div>
+          <div class="hud-corner bl"></div>
+          <div class="hud-corner br"></div>
+          <p class="contact-card-tag">OUTLET // 02</p>
+          <h3>Jamuna Future Park</h3>
+          <p class="contact-bangla">যমুনা ফিউচার পার্ক আউটলেট</p>
+          <p class="contact-address">Level 4, Zone A (West Court), Shop 4A-028D, Jamuna Future Park, Kuril, Dhaka 1229</p>
+          <a href="https://maps.google.com/?q=23.8134802,90.4241648" target="_blank" class="btn-outline">View on Map →</a>
+        </div>
+        <div class="contact-card contact-info-card">
+          <div class="hud-corner tl"></div>
+          <div class="hud-corner tr"></div>
+          <div class="hud-corner bl"></div>
+          <div class="hud-corner br"></div>
+          <p class="contact-card-tag">CONTACT // INFO</p>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <span class="info-label">PHONE</span>
+              <a href="tel:09678148148" class="info-value accent">09678148148</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-label">EMAIL</span>
+              <a href="mailto:contact@applegadgetsbd.com" class="info-value">contact@applegadgetsbd.com</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-label">HOURS</span>
+              <span class="info-value">11:00 AM — 8:00 PM</span>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-label">FACEBOOK</span>
+              <a href="https://www.facebook.com/applegadgetsbangladesh/" target="_blank" class="info-value accent">@applegadgetsbangladesh</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-label">INSTAGRAM</span>
+              <a href="https://www.instagram.com/applegadgetsbd/" target="_blank" class="info-value accent">@applegadgetsbd</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-text">Apple <span class="accent">Gadgets</span></span>
+          <p>বাংলাদেশের প্রিমিয়াম টেক স্টোর</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#products">Products</a>
+          <a href="#offers">Offers</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/applegadgetsbangladesh/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/applegadgetsbd/" target="_blank">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Apple Gadgets Bangladesh. All Rights Reserved.</p>
+        <p class="footer-hud">SYS_ID: AG-BD-2026 // STATUS: ONLINE</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Our JS files -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
