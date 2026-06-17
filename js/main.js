@@ -35,128 +35,92 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale')
 /* ---------- CATEGORIES DATA ---------- */
 const categories = [
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="20" y="8" width="60" height="84" rx="10" ry="10" fill="none" stroke="currentColor" stroke-width="3"/>
-      <rect x="28" y="18" width="44" height="56" rx="3" fill="rgba(0,212,255,0.08)"/>
-      <circle cx="50" cy="82" r="4" fill="currentColor" opacity="0.6"/>
-      <line x1="42" y1="13" x2="58" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5" y="2" width="14" height="20" rx="2"/>
+      <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/>
     </svg>`,
     name: 'Mobile Phones', nameBn: 'মোবাইল ফোন', color: '#00D4FF', index: '01'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="20" width="72" height="46" rx="5" fill="none" stroke="currentColor" stroke-width="3"/>
-      <rect x="18" y="28" width="56" height="30" rx="2" fill="rgba(0,212,255,0.06)"/>
-      <rect x="30" y="68" width="32" height="5" rx="2" fill="currentColor" opacity="0.4"/>
-      <rect x="20" y="73" width="52" height="4" rx="2" fill="currentColor" opacity="0.3"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="13" rx="2"/>
+      <path d="M8 21h8M12 17v4"/>
     </svg>`,
     name: 'Laptops', nameBn: 'ল্যাপটপ', color: '#7B61FF', index: '02'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="12" width="70" height="76" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-      <rect x="24" y="22" width="52" height="56" rx="3" fill="rgba(0,212,255,0.06)"/>
-      <circle cx="50" cy="85" r="3.5" fill="currentColor" opacity="0.5"/>
-      <line x1="44" y1="17" x2="56" y2="17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="2" width="16" height="20" rx="2"/>
+      <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/>
     </svg>`,
     name: 'Tablets', nameBn: 'ট্যাবলেট', color: '#00D4FF', index: '03'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="3"/>
-      <circle cx="50" cy="50" r="24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-      <circle cx="50" cy="50" r="6" fill="currentColor" opacity="0.6"/>
-      <line x1="50" y1="50" x2="50" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="50" y1="50" x2="62" y2="54" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <rect x="30" y="14" width="8" height="5" rx="2" fill="currentColor" opacity="0.5"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="7"/>
+      <polyline points="12 9 12 12 13.5 13.5"/>
+      <path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"/>
     </svg>`,
     name: 'Smart Watches', nameBn: 'স্মার্ট ওয়াচ', color: '#FF6B35', index: '04'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="50" cy="50" rx="28" ry="28" fill="none" stroke="currentColor" stroke-width="3"/>
-      <ellipse cx="50" cy="50" rx="14" ry="14" fill="rgba(0,212,255,0.1)" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-      <rect x="20" y="46" width="8" height="8" rx="3" fill="currentColor" opacity="0.7"/>
-      <rect x="72" y="46" width="8" height="8" rx="3" fill="currentColor" opacity="0.7"/>
-      <path d="M28 50 Q20 30 14 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <path d="M72 50 Q80 30 86 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/>
     </svg>`,
     name: 'Headphones', nameBn: 'হেডফোন', color: '#7B61FF', index: '05'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="32" y="10" width="36" height="56" rx="18" fill="none" stroke="currentColor" stroke-width="3"/>
-      <line x1="50" y1="66" x2="50" y2="82" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <line x1="36" y1="82" x2="64" y2="82" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <line x1="26" y1="44" x2="74" y2="44" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
-      <circle cx="50" cy="38" r="3" fill="currentColor" opacity="0.5"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18V5l12-2v13"/>
+      <circle cx="6" cy="18" r="3"/>
+      <circle cx="18" cy="16" r="3"/>
     </svg>`,
     name: 'AirPods', nameBn: 'এয়ারপড', color: '#00D4FF', index: '06'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="22" y="28" width="56" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-      <circle cx="38" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="62" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="38" cy="50" r="4" fill="currentColor" opacity="0.5"/>
-      <circle cx="62" cy="50" r="4" fill="currentColor" opacity="0.5"/>
-      <line x1="36" y1="28" x2="36" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <line x1="64" y1="28" x2="64" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="2" width="16" height="20" rx="2"/>
+      <circle cx="12" cy="14" r="4"/>
+      <line x1="12" y1="6" x2="12.01" y2="6" stroke-width="2"/>
     </svg>`,
     name: 'Speakers', nameBn: 'স্পিকার', color: '#FF6B35', index: '07'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="18" y="30" width="64" height="46" rx="6" fill="none" stroke="currentColor" stroke-width="3"/>
-      <rect x="26" y="38" width="18" height="14" rx="3" fill="rgba(0,212,255,0.15)" stroke="currentColor" stroke-width="1.5"/>
-      <rect x="52" y="38" width="8" height="8" rx="2" fill="currentColor" opacity="0.4"/>
-      <rect x="64" y="38" width="8" height="8" rx="2" fill="currentColor" opacity="0.4"/>
-      <rect x="52" y="52" width="8" height="5" rx="1.5" fill="currentColor" opacity="0.3"/>
-      <rect x="64" y="52" width="8" height="5" rx="1.5" fill="currentColor" opacity="0.3"/>
-      <line x1="38" y1="22" x2="38" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="62" y1="22" x2="62" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <polyline points="9 22 9 12 15 12 15 22"/>
     </svg>`,
     name: 'Home Appliances', nameBn: 'হোম অ্যাপ্লায়েন্স', color: '#7B61FF', index: '08'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="50,10 90,32 90,68 50,90 10,68 10,32" fill="none" stroke="currentColor" stroke-width="3"/>
-      <polygon points="50,26 74,40 74,60 50,74 26,60 26,40" fill="rgba(0,212,255,0.08)" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-      <circle cx="50" cy="50" r="8" fill="currentColor" opacity="0.4"/>
-      <line x1="50" y1="10" x2="50" y2="26" stroke="currentColor" stroke-width="2"/>
-      <line x1="90" y1="32" x2="74" y2="40" stroke="currentColor" stroke-width="2"/>
-      <line x1="90" y1="68" x2="74" y2="60" stroke="currentColor" stroke-width="2"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="2" y1="12" x2="22" y2="12"/>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
     </svg>`,
     name: 'Starlink', nameBn: 'স্টারলিংক', color: '#00D4FF', index: '09'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="38" y="10" width="24" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
-      <rect x="44" y="26" width="12" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="3"/>
-      <rect x="36" y="66" width="28" height="24" rx="5" fill="none" stroke="currentColor" stroke-width="3"/>
-      <line x1="50" y1="74" x2="50" y2="82" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <line x1="44" y1="78" x2="56" y2="78" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+      <line x1="12" y1="10" x2="12" y2="16"/>
+      <line x1="9" y1="13" x2="15" y2="13"/>
     </svg>`,
     name: 'Adapters', nameBn: 'অ্যাডাপ্টার', color: '#FF6B35', index: '10'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="26" cy="30" r="10" fill="none" stroke="currentColor" stroke-width="3"/>
-      <circle cx="74" cy="70" r="10" fill="none" stroke="currentColor" stroke-width="3"/>
-      <path d="M34 36 Q50 20 66 36 Q82 52 66 64" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <circle cx="26" cy="30" r="4" fill="currentColor" opacity="0.5"/>
-      <circle cx="74" cy="70" r="4" fill="currentColor" opacity="0.5"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
     </svg>`,
     name: 'Cables', nameBn: 'ক্যাবল', color: '#7B61FF', index: '11'
   },
   {
-    icon: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="54" r="30" fill="none" stroke="currentColor" stroke-width="3"/>
-      <circle cx="50" cy="54" r="18" fill="rgba(0,212,255,0.08)" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-      <circle cx="50" cy="54" r="6" fill="currentColor" opacity="0.6"/>
-      <path d="M50 14 L50 24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <path d="M42 16 L46 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-      <path d="M58 16 L54 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+      <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+      <line x1="12" y1="20" x2="12.01" y2="20" stroke-width="2"/>
     </svg>`,
     name: 'Wireless Chargers', nameBn: 'ওয়্যারলেস চার্জার', color: '#00D4FF', index: '12'
   },
@@ -247,24 +211,15 @@ let isTransitioning = false;
 function buildCategoryShowcase() {
   const wrapper = document.getElementById('categoriesGrid');
   if (!wrapper) return;
-
   wrapper.innerHTML = '';
   wrapper.className = 'cat-showcase';
-
   wrapper.innerHTML = `
-    <!-- Background ambient glow -->
     <div class="cat-ambient" id="catAmbient"></div>
-
-    <!-- Particle canvas -->
     <canvas class="cat-canvas" id="catCanvas"></canvas>
-
-    <!-- HUD labels -->
     <div class="cat-hud-tl">CAT_SYS // BROWSE</div>
     <div class="cat-hud-tr" id="catCounter">01 / 12</div>
     <div class="cat-hud-bl" id="catIndexLabel">INDEX_01</div>
     <div class="cat-hud-br">AG // CATEGORIES</div>
-
-    <!-- Main floating icon -->
     <div class="cat-hero" id="catHero">
       <div class="cat-orbit-ring ring-1"></div>
       <div class="cat-orbit-ring ring-2"></div>
@@ -274,54 +229,37 @@ function buildCategoryShowcase() {
         <div class="cat-svg-icon" id="catSvgIcon"></div>
       </div>
     </div>
-
-    <!-- Category name -->
     <div class="cat-info" id="catInfo">
       <p class="cat-name-en" id="catNameEn"></p>
       <p class="cat-name-bn" id="catNameBn"></p>
     </div>
-
-    <!-- Dot navigation -->
     <div class="cat-dots" id="catDots"></div>
-
-    <!-- Arrow navigation -->
     <button class="cat-arrow cat-prev" id="catPrev" aria-label="Previous">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="15 18 9 12 15 6"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
     <button class="cat-arrow cat-next" id="catNext" aria-label="Next">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="9 18 15 12 9 6"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
     </button>
-
-    <!-- All categories mini strip -->
     <div class="cat-strip" id="catStrip"></div>
   `;
 
-  // Build dot nav
   const dots = document.getElementById('catDots');
   categories.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.className = 'cat-dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Category ${i + 1}`);
     dot.addEventListener('click', () => goToCategory(i));
     dots.appendChild(dot);
   });
 
-  // Build mini strip
   const strip = document.getElementById('catStrip');
   categories.forEach((cat, i) => {
     const chip = document.createElement('button');
     chip.className = 'cat-chip' + (i === 0 ? ' active' : '');
-    chip.innerHTML = `<span class="chip-icon">${cat.name.split(' ')[0]}</span>`;
-    chip.setAttribute('title', cat.name);
+    chip.textContent = cat.name.split(' ')[0];
     chip.addEventListener('click', () => goToCategory(i));
     strip.appendChild(chip);
   });
 
-  // Arrow controls
   document.getElementById('catPrev').addEventListener('click', () => {
     goToCategory((currentCat - 1 + categories.length) % categories.length);
   });
@@ -329,17 +267,14 @@ function buildCategoryShowcase() {
     goToCategory((currentCat + 1) % categories.length);
   });
 
-  // Keyboard navigation
   document.addEventListener('keydown', (e) => {
-    const catSection = document.querySelector('.categories');
-    const rect = catSection?.getBoundingClientRect();
+    const rect = document.querySelector('.categories')?.getBoundingClientRect();
     if (rect && rect.top < window.innerHeight && rect.bottom > 0) {
       if (e.key === 'ArrowLeft')  goToCategory((currentCat - 1 + categories.length) % categories.length);
       if (e.key === 'ArrowRight') goToCategory((currentCat + 1) % categories.length);
     }
   });
 
-  // Touch/swipe support
   let touchStartX = 0;
   wrapper.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
   wrapper.addEventListener('touchend', e => {
@@ -350,7 +285,6 @@ function buildCategoryShowcase() {
     }
   });
 
-  // Show first category
   showCategory(0, false);
   startAutoplay();
 }
@@ -358,7 +292,6 @@ function buildCategoryShowcase() {
 function showCategory(index, animate = true) {
   if (isTransitioning && animate) return;
   isTransitioning = animate;
-
   const cat        = categories[index];
   const iconWrap   = document.getElementById('catIconWrap');
   const svgIcon    = document.getElementById('catSvgIcon');
@@ -369,39 +302,26 @@ function showCategory(index, animate = true) {
   const ambient    = document.getElementById('catAmbient');
   const glowOrb    = document.getElementById('catGlowOrb');
 
-  // Fire particles on transition
   if (animate) fireParticles(cat.color);
 
-  // Animate out
   if (animate) {
     iconWrap.classList.add('exit');
     document.getElementById('catInfo').classList.add('exit');
   }
 
   setTimeout(() => {
-    // Update content
-    svgIcon.innerHTML  = cat.icon;
+    svgIcon.innerHTML   = cat.icon;
     svgIcon.style.color = cat.color;
     nameEn.textContent  = cat.name;
     nameBn.textContent  = cat.nameBn;
     counter.textContent = `${cat.index} / 12`;
     indexLabel.textContent = `INDEX_${cat.index}`;
+    ambient.style.background  = `radial-gradient(circle at 50% 50%, ${cat.color}18 0%, transparent 65%)`;
+    glowOrb.style.background  = `radial-gradient(circle, ${cat.color}30 0%, transparent 70%)`;
 
-    // Update ambient color
-    ambient.style.background = `radial-gradient(circle at 50% 50%, ${cat.color}18 0%, transparent 65%)`;
-    glowOrb.style.background = `radial-gradient(circle, ${cat.color}30 0%, transparent 70%)`;
+    document.querySelectorAll('.cat-dot').forEach((d, i) => d.classList.toggle('active', i === index));
+    document.querySelectorAll('.cat-chip').forEach((c, i) => c.classList.toggle('active', i === index));
 
-    // Update dots
-    document.querySelectorAll('.cat-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === index);
-    });
-
-    // Update chips
-    document.querySelectorAll('.cat-chip').forEach((c, i) => {
-      c.classList.toggle('active', i === index);
-    });
-
-    // Animate in
     if (animate) {
       iconWrap.classList.remove('exit');
       iconWrap.classList.add('enter');
@@ -434,15 +354,13 @@ function resetAutoplay() {
   startAutoplay();
 }
 
-/* ---------- PARTICLE BURST ---------- */
 function fireParticles(color) {
   const canvas = document.getElementById('catCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   canvas.width  = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
-
-  const cx = canvas.width  / 2;
+  const cx = canvas.width / 2;
   const cy = canvas.height / 2;
   const particles = Array.from({ length: 40 }, () => ({
     x: cx, y: cy,
@@ -452,7 +370,6 @@ function fireParticles(color) {
     angle: Math.random() * Math.PI * 2,
     decay: Math.random() * 0.02 + 0.015,
   }));
-
   let frame = 0;
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);

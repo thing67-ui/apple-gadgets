@@ -574,15 +574,16 @@ ul   { list-style: none; }
 }
 
 .cat-svg-icon {
-  width: 140px;
-  height: 140px;
-  filter: drop-shadow(0 0 30px currentColor);
+  width: 160px;
+  height: 160px;
+  filter: drop-shadow(0 0 25px currentColor);
   transition: color 0.5s ease, filter 0.5s ease;
 }
 
 .cat-svg-icon svg {
   width: 100%;
   height: 100%;
+  stroke: currentColor;
 }
 
 /* Category info */
